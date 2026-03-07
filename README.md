@@ -44,20 +44,16 @@ Berikut adalah tampilan dari aplikasi yang dikerjakan:
 
 1. Home / Search Page
 Halaman utama untuk mencari film dan memilih bahasa (EN/ID).
-!
-*(![home](screenshots/Home.png)) *
+![home](screenshots/Home.png)
 
 2. Login Page
 Halaman otentikasi dengan fitur toggle password (Show/Hide).
-!
-*(![Login](screenshots/Login.png)) *
+![Login](screenshots/Login.png)
 
 3. Favorites
 Menampilkan Favorit list berdasarkan user.
-!
-*(S![Favorite](screenshots/Favorites.png)) *
+![Favorite](screenshots/Favorites.png)
 
 4. Detail
 Menampilkan informasi lengkap mengenai film yang dipilih.
-!
-*(![Favorite](screenshots/Detail.png)) *
+![Favorite](screenshots/Detail.png)
