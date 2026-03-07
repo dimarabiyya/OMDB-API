@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use GuzzleHttp\Client;
+use App\Favorite;
+use Illuminate\Support\Facades\Auth;
 
 class MovieController extends Controller
 {
@@ -46,7 +48,6 @@ class MovieController extends Controller
 
             $data = json_decode($response->getBody(), true);
 
-            // ✅ Selalu return JSON karena dipanggil via AJAX
             return response()->json($data);
 
         } catch (\Exception $e) {
@@ -85,5 +86,34 @@ class MovieController extends Controller
                 'Error'    => 'Gagal mengambil detail film.'
             ], 500);
         }
+    }
+
+    public function toggleFavorite(Request $request)
+    {
+        $userId = Auth::id();
+        $imdbID = $request->imdbID;
+
+        $exists = Favorite::where('user_id', $userId)->where('imdbID', $imdbID)->first();
+
+        if ($exists) {
+            $exists->delete();
+            return response()->json(['status' => 'removed', 'message' => 'Dihapus dari favorit']);
+        }
+
+        Favorite::create([
+            'user_id' => $userId,
+            'imdbID'  => $imdbID,
+            'title'   => $request->title,
+            'year'    => $request->year,
+            'poster'  => $request->poster,
+        ]);
+
+        return response()->json(['status' => 'added', 'message' => 'Ditambahkan ke favorit']);
+    }
+
+    public function listFavorites()
+    {
+        $favorites = Favorite::where('user_id', Auth::id())->get();
+        return view('favorites', compact('favorites'));
     }
 }
