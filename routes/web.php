@@ -4,9 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MovieController;
 use App\Http\Controllers\AuthController;
 
-Route::get('lang/{locale}', function ($locale) {
-    if (in_array($locale, ['en', 'id'])) {
-        session()->put('locale', $locale);
+Route::get('switch/{lang}', function ($lang) {
+    if (in_array($lang, ['en', 'id'])) {
+        session(['locale' => $lang]);
     }
     return redirect()->back();
 })->name('lang.switch');
