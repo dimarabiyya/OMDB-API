@@ -42,17 +42,22 @@ Authentication: Sistem Login dan Register yang aman.
 📸 Screenshots
 Berikut adalah tampilan dari aplikasi yang dikerjakan:
 
-1. Dashboard / Search Page
+1. Home / Search Page
 Halaman utama untuk mencari film dan memilih bahasa (EN/ID).
 !
-*(Silakan ganti teks ini dengan link gambar: ![Dashboard](link_gambar_anda)) *
+*(Silakan ganti teks ini dengan link gambar: ![home](screenshots/Home.png)) *
 
 2. Login Page
 Halaman otentikasi dengan fitur toggle password (Show/Hide).
 !
-*(Silakan ganti teks ini dengan link gambar: ![Login](link_gambar_anda)) *
+*(Silakan ganti teks ini dengan link gambar: ![Login](screenshots/Login.png)) *
 
-3. Movie Detail
+3. Favorites
 Menampilkan informasi lengkap mengenai film yang dipilih.
 !
-*(Silakan ganti teks ini dengan link gambar: ![Detail](link_gambar_anda)) *
+*(Silakan ganti teks ini dengan link gambar: ![Favorite](screenshots/Favorites.png)) *
+
+4. Detail
+Menampilkan informasi lengkap mengenai film yang dipilih.
+!
+*(Silakan ganti teks ini dengan link gambar: ![Favorite](screenshots/Detail.png)) *
