@@ -44,7 +44,7 @@ Berikut adalah tampilan dari aplikasi yang dikerjakan:
 
 1. Home / Search Page
 Halaman utama untuk mencari film dan memilih bahasa (EN/ID).
-![home](screenshots/Home.jpeg)
+![home](screenshots/Home.png)
 
 2. Login Page
 Halaman otentikasi dengan fitur toggle password (Show/Hide).
