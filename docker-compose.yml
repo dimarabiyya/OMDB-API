@@ -1,0 +1,40 @@
+version: '3'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: laravel-omdb-app
+    container_name: omdb-app
+    restart: unless-stopped
+    working_dir: /var/www
+    volumes:
+      - .:/var/www
+    networks:
+      - laravel
+
+  webserver:
+    image: nginx:alpine
+    container_name: omdb-nginx
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/var/www
+      - ./nginx-conf:/etc/nginx/conf.d/
+    networks:
+      - laravel
+
+  db:
+    image: mysql:5.7
+    container_name: omdb-db
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: omdb_api
+      MYSQL_ROOT_PASSWORD: root
+    networks:
+      - laravel
+
+networks:
+  laravel:
+    driver: bridge
