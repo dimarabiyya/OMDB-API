@@ -9,6 +9,13 @@ Route::get('login', 'AuthController@showLogin')->name('login');
 Route::post('login', 'AuthController@login');
 Route::post('logout', 'AuthController@logout')->name('logout');
 
+Route::get('lang/{locale}', function ($locale) {
+    if (in_array($locale, ['en', 'id'])) {
+        session()->put('locale', $locale);
+    }
+    return redirect()->back();
+})->name('lang.switch');
+
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/', 'MovieController@index')->name('home');
     Route::get('/movie/detail', 'MovieController@detail')->name('movie.detail');
@@ -19,11 +26,4 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/movie/favorite', 'MovieController@toggleFavorite')->name('movie.favorite');
     Route::get('/favorites', 'MovieController@listFavorites')->name('movie.favorites.list');
     
-});
-
-Route::get('lang/{locale}', function ($locale) {
-    if (in_array($locale, ['en', 'id'])) {
-        session()->put('locale', $locale);
-    }
-    return redirect()->back();
 });

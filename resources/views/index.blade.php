@@ -35,11 +35,12 @@
                 <div class="dropdown mr-3">
                     <button class="btn btn-sm btn-outline-light dropdown-toggle" type="button" data-toggle="dropdown">
                         {{ strtoupper(App::getLocale()) }}
+                        <div class="dropdown-menu dropdown-menu-right bg-dark shadow">
+                            <a class="dropdown-item text-white" href="{{ route('lang.switch', 'en') }}">English</a>
+                            <a class="dropdown-item text-white" href="{{ route('lang.switch', 'id') }}">Indonesia</a>
+                        </div>
                     </button>
-                    <div class="dropdown-menu dropdown-menu-right bg-dark shadow">
-                        <a class="dropdown-item text-white" href="{{ url('lang/en') }}">English</a>
-                        <a class="dropdown-item text-white" href="{{ url('lang/id') }}">Indonesia</a>
-                    </div>
+                    
                 </div>
 
                 <a href="{{ route('movie.favorites.list') }}" class="btn btn-link text-warning p-0 mr-3" style="font-size: 1.2rem; text-decoration:none;">⭐</a>
@@ -51,6 +52,8 @@
                     <button type="submit" class="btn btn-outline-light btn-sm">Logout</button>
                 </form>
             </div>
+
+            
         </div>
     </nav>
 
