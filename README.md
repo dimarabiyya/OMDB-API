@@ -5,7 +5,7 @@ Aplikasi berbasis web untuk mencari informasi film menggunakan OMDB API, dilengk
 Aplikasi ini dibangun menggunakan ekosistem PHP dan JavaScript dengan pustaka-pustaka berikut:
 
 Backend (Framework)
-Laravel 7/8: Framework PHP utama untuk logika bisnis dan routing.
+Laravel 5: Framework PHP utama untuk logika bisnis dan routing.
 
 GuzzleHTTP: Digunakan untuk melakukan request API ke OMDB.
 
@@ -45,19 +45,19 @@ Berikut adalah tampilan dari aplikasi yang dikerjakan:
 1. Home / Search Page
 Halaman utama untuk mencari film dan memilih bahasa (EN/ID).
 !
-*(Silakan ganti teks ini dengan link gambar: ![home](screenshots/Home.png)) *
+*(![home](screenshots/Home.png)) *
 
 2. Login Page
 Halaman otentikasi dengan fitur toggle password (Show/Hide).
 !
-*(Silakan ganti teks ini dengan link gambar: ![Login](screenshots/Login.png)) *
+*(![Login](screenshots/Login.png)) *
 
 3. Favorites
-Menampilkan informasi lengkap mengenai film yang dipilih.
+Menampilkan Favorit list berdasarkan user.
 !
-*(Silakan ganti teks ini dengan link gambar: ![Favorite](screenshots/Favorites.png)) *
+*(S![Favorite](screenshots/Favorites.png)) *
 
 4. Detail
 Menampilkan informasi lengkap mengenai film yang dipilih.
 !
-*(Silakan ganti teks ini dengan link gambar: ![Favorite](screenshots/Detail.png)) *
+*(![Favorite](screenshots/Detail.png)) *
