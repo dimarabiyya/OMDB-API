@@ -9,11 +9,12 @@ class SetLocale
 {
     public function handle($request, Closure $next)
     {
-        // Membaca session 'locale', jika tidak ada default ke 'en'
+        // Cek apakah ada session 'locale'
         if (session()->has('locale')) {
+            // Set bahasa aplikasi sesuai session
             App::setLocale(session()->get('locale'));
         }
-        
+
         return $next($request);
     }
 }

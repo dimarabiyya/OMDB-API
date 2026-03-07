@@ -36,8 +36,8 @@
                     <button class="btn btn-sm btn-outline-light dropdown-toggle" type="button" data-toggle="dropdown">
                         {{ strtoupper(App::getLocale()) }}
                         <div class="dropdown-menu dropdown-menu-right bg-dark shadow">
-                            <a class="dropdown-item text-white" href="{{ route('lang.switch', 'en') }}">English</a>
-                            <a class="dropdown-item text-white" href="{{ route('lang.switch', 'id') }}">Indonesia</a>
+                            <a class="dropdown-item text-white {{ App::getLocale() == 'en' ? 'active' : '' }}" href="{{ route('lang.switch', 'en') }}">English</a>
+                            <a class="dropdown-item text-white {{ App::getLocale() == 'id' ? 'active' : '' }}" href="{{ route('lang.switch', 'id') }}">Indonesia</a>
                         </div>
                     </button>
                     
