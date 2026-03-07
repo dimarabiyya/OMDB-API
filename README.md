@@ -1,11 +1,11 @@
-Movie Library App (OMDB API Integration)
+🎬 Movie Library App (OMDB API Integration)
 Aplikasi berbasis web untuk mencari informasi film menggunakan OMDB API, dilengkapi dengan fitur manajemen bahasa (Localization) dan sistem otentikasi.
 
-Libraries & Tech Stack
+🛠 Libraries & Tech Stack
 Aplikasi ini dibangun menggunakan ekosistem PHP dan JavaScript dengan pustaka-pustaka berikut:
 
 Backend (Framework)
-Laravel 5.7: Framework PHP utama untuk logika bisnis dan routing.
+Laravel 7/8: Framework PHP utama untuk logika bisnis dan routing.
 
 GuzzleHTTP: Digunakan untuk melakukan request API ke OMDB.
 
@@ -21,9 +21,9 @@ FontAwesome 4.7: Library ikon untuk antarmuka pengguna.
 Google Fonts: Menggunakan font Nunito untuk tipografi yang bersih.
 
 Database
-MySQL: Untuk menyimpan data pengguna (User) dan daftar favorit.
+MySQL/MariaDB: Untuk menyimpan data pengguna (User) dan daftar favorit.
 
-Architecture
+🏗 Architecture
 Proyek ini mengikuti arsitektur MVC (Model-View-Controller) yang merupakan standar dari Laravel:
 
 Models: Mengelola data dan interaksi database (terletak di app/).
@@ -39,5 +39,20 @@ External API Integration: Mengambil data film secara real-time dari server pihak
 
 Authentication: Sistem Login dan Register yang aman.
 
-Screenshots
+📸 Screenshots
 Berikut adalah tampilan dari aplikasi yang dikerjakan:
+
+1. Dashboard / Search Page
+Halaman utama untuk mencari film dan memilih bahasa (EN/ID).
+!
+*(Silakan ganti teks ini dengan link gambar: ![Dashboard](link_gambar_anda)) *
+
+2. Login Page
+Halaman otentikasi dengan fitur toggle password (Show/Hide).
+!
+*(Silakan ganti teks ini dengan link gambar: ![Login](link_gambar_anda)) *
+
+3. Movie Detail
+Menampilkan informasi lengkap mengenai film yang dipilih.
+!
+*(Silakan ganti teks ini dengan link gambar: ![Detail](link_gambar_anda)) *
